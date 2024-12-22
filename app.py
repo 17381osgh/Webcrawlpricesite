@@ -26,10 +26,11 @@ def get_products():
 def get_recommended_products():
     return jsonify(recommended_products)
 
-def fetch_products_from_source(url, query):
+def fetch_products(query):
+    search_url = f"https://www.example-search-engine.com/search?q={query}"  # Replace with a real search engine URL
     try:
-        response = requests.get(url, params={'q': query})
-        response.raise_for_status()  # Raise an error for bad responses
+        response = requests.get(search_url)
+        response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
 
         products = []
@@ -53,21 +54,26 @@ def search():
     if not query:
         return jsonify({'error': 'No search query provided'}), 400
 
-    # Example URLs for different sources
-    sources = [
-        'https://example.com/search',  # Replace with actual URLs
-        'https://another-example.com/search'
-    ]
-
-    all_products = []
-    for source in sources:
-        products = fetch_products_from_source(source, query)
-        all_products.extend(products)
+    all_products = fetch_products(query)
 
     if not all_products:
         return jsonify({'message': 'No products found'}), 404
 
-    return jsonify(all_products)
+    # Choose recommended and static products based on search results
+    chosen_recommended = []
+    chosen_static = []
+
+    for product in all_products:
+        # Example criteria for choosing recommended products
+        if 'Recommended' in product['title'] or float(product['price'].replace('€', '').replace(',', '.')) < 20:
+            chosen_recommended.append(product)
+        else:
+            chosen_static.append(product)
+
+    return jsonify({
+        'recommended': chosen_recommended,
+        'static': chosen_static
+    })
 
 if __name__ == '__main__':
     app.run(debug=True) 
