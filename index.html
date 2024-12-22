@@ -38,12 +38,10 @@
             padding: 20px 0;
             text-align: center;
         }
-        .social-icons a {
-            color: white;
-            margin: 0 10px;
-        }
-        .btn-light {
-            margin-left: 10px;
+        .error-message {
+            color: red;
+            margin: 20px 0;
+            display: none; /* Hidden by default */
         }
     </style>
 </head>
@@ -70,6 +68,10 @@
         <h2>Search Results</h2>
         <div class="row" id="search-results">
             <!-- Search results will be injected here -->
+        </div>
+
+        <div class="error-message" id="error-message">
+            <!-- Error messages will be displayed here -->
         </div>
     </div>
 
@@ -98,6 +100,7 @@
 
         function displayRecommendedProducts(products) {
             const container = document.getElementById('recommended-products');
+            container.innerHTML = ''; // Clear previous products
             products.forEach(product => {
                 const card = document.createElement('div');
                 card.className = 'col-md-4';
@@ -114,13 +117,17 @@
 
         async function searchProducts() {
             const input = document.getElementById('searchInput').value;
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.style.display = 'none'; // Hide error message initially
+
             if (!input) {
                 alert("Please enter a search query.");
                 return;
             }
             const response = await fetch(`/search?query=${input}`);
             if (!response.ok) {
-                alert("No products found.");
+                errorMessage.innerText = "No products found.";
+                errorMessage.style.display = 'block'; // Show error message
                 return;
             }
             const products = await response.json();
@@ -130,7 +137,16 @@
         function displaySearchResults(products) {
             const container = document.getElementById('search-results');
             container.innerHTML = ''; // Clear previous results
-            products.forEach(product => {
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.style.display = 'none'; // Hide error message
+
+            if (products.recommended.length === 0 && products.static.length === 0) {
+                errorMessage.innerText = "No products found.";
+                errorMessage.style.display = 'block'; // Show error message
+                return;
+            }
+
+            products.recommended.forEach(product => {
                 const card = document.createElement('div');
                 card.className = 'col-md-4';
                 card.innerHTML = `
