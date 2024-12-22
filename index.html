@@ -22,15 +22,86 @@
             margin: 0;
             font-size: 2.5em;
         }
-        p {
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
             font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .price-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+        .price-card:hover {
+            transform: scale(1.05);
+        }
+        .price-card h2 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .price-card p {
+            font-size: 1.2em;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            nav a {
+                font-size: 1em;
+            }
+            .price-card {
+                margin: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Webcrawl Price Site</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <p>Welkom op mijn website voor prijsinformatie!</p>
+    <div class="container">
+        <p>Welkom op mijn website voor prijsinformatie!</p>
+        <div class="price-card">
+            <h2>Product 1</h2>
+            <p>Prijs: €10</p>
+        </div>
+        <div class="price-card">
+            <h2>Product 2</h2>
+            <p>Prijs: €20</p>
+        </div>
+        <div class="price-card">
+            <h2>Product 3</h2>
+            <p>Prijs: €30</p>
+        </div>
+    </div>
 </body>
 </html>
