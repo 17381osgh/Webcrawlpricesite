@@ -29,6 +29,9 @@ def fetch_products_from_source(url, query):
             products.append({'title': title, 'price': price, 'link': link})
 
         return products
+    except requests.exceptions.RequestException as e:
+        print(f"Request error: {e}")
+        return []
     except Exception as e:
         print(f"Error fetching products: {e}")
         return []
