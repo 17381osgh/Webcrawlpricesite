@@ -57,27 +57,40 @@
         .price-card p {
             font-size: 1.2em;
         }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            nav a {
-                font-size: 1em;
-            }
-            .price-card {
-                margin: 10px;
-            }
+        .search-container {
+            margin: 20px 0;
         }
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
+        .search-container input {
+            padding: 10px;
+            font-size: 1em;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
     </style>
+    <script>
+        async function searchProducts() {
+            const input = document.getElementById('searchInput').value;
+            const response = await fetch(`https://api.example.com/products?search=${input}`);
+            const products = await response.json();
+            displayProducts(products);
+        }
+
+        function displayProducts(products) {
+            const container = document.querySelector('.container');
+            container.innerHTML = ''; // Clear previous results
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'price-card';
+                card.innerHTML = `
+                    <h2>${product.title}</h2>
+                    <p>Prijs: ${product.price}</p>
+                    <a href="${product.link}" target="_blank">Bekijk Deal</a>
+                `;
+                container.appendChild(card);
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -89,19 +102,10 @@
         </nav>
     </header>
     <div class="container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for products..." onkeyup="searchProducts()">
+        </div>
         <p>Welkom op mijn website voor prijsinformatie!</p>
-        <div class="price-card">
-            <h2>Product 1</h2>
-            <p>Prijs: €10</p>
-        </div>
-        <div class="price-card">
-            <h2>Product 2</h2>
-            <p>Prijs: €20</p>
-        </div>
-        <div class="price-card">
-            <h2>Product 3</h2>
-            <p>Prijs: €30</p>
-        </div>
     </div>
 </body>
 </html>
