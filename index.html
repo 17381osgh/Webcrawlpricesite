@@ -87,21 +87,14 @@
             </div>
         </div>
 
+        <h2>Recommended Products</h2>
+        <div class="row" id="recommended-products">
+            <!-- Recommended products will be injected here -->
+        </div>
+
         <h2>Search Results</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/150" alt="Product Image" class="img-fluid">
-                    <h5>Product Name</h5>
-                    <p>Prices:</p>
-                    <ul>
-                        <li>Amazon: €10 <button class="btn btn-primary btn-sm">Buy Now</button></li>
-                        <li>eBay: €12 <button class="btn btn-primary btn-sm">Buy Now</button></li>
-                    </ul>
-                    <button class="btn btn-secondary btn-sm">Save to Favorites</button>
-                </div>
-            </div>
-            <!-- Repeat product cards as needed -->
+        <div class="row" id="search-results">
+            <!-- Search results will be injected here -->
         </div>
     </div>
 
@@ -121,5 +114,55 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        async function fetchRecommendedProducts() {
+            const response = await fetch('/recommended');
+            const products = await response.json();
+            displayRecommendedProducts(products);
+        }
+
+        function displayRecommendedProducts(products) {
+            const container = document.getElementById('recommended-products');
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'col-md-4';
+                card.innerHTML = `
+                    <div class="product-card">
+                        <h5>${product.title}</h5>
+                        <p>Price: ${product.price}</p>
+                        <a href="${product.link}" class="btn btn-primary">View Deal</a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        async function searchProducts() {
+            const input = document.getElementById('searchInput').value;
+            const response = await fetch(`/search?query=${input}`);
+            const products = await response.json();
+            displaySearchResults(products);
+        }
+
+        function displaySearchResults(products) {
+            const container = document.getElementById('search-results');
+            container.innerHTML = ''; // Clear previous results
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'col-md-4';
+                card.innerHTML = `
+                    <div class="product-card">
+                        <h5>${product.title}</h5>
+                        <p>Price: ${product.price}</p>
+                        <a href="${product.link}" class="btn btn-primary">Buy Now</a>
+                        <button class="btn btn-secondary btn-sm">Save to Favorites</button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        window.onload = fetchRecommendedProducts; // Fetch recommended products when the page loads
+    </script>
 </body>
 </html>

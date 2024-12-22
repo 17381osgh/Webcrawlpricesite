@@ -11,9 +11,20 @@ static_products = [
     {'title': 'Product 3', 'price': '€30', 'link': 'https://example.com/product3'},
 ]
 
+# Sample recommended products
+recommended_products = [
+    {'title': 'Recommended Product 1', 'price': '€15', 'link': 'https://example.com/recommended1'},
+    {'title': 'Recommended Product 2', 'price': '€25', 'link': 'https://example.com/recommended2'},
+    {'title': 'Recommended Product 3', 'price': '€35', 'link': 'https://example.com/recommended3'},
+]
+
 @app.route('/products', methods=['GET'])
 def get_products():
     return jsonify(static_products)
+
+@app.route('/recommended', methods=['GET'])
+def get_recommended_products():
+    return jsonify(recommended_products)
 
 def fetch_products_from_source(url, query):
     try:
