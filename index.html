@@ -10,7 +10,7 @@
             background-color: #f8f9fa;
         }
         .header {
-            background-color: #ababab;
+            background-color: #343a40;
             color: white;
             padding: 10px 0;
         }
@@ -42,6 +42,9 @@
             color: white;
             margin: 0 10px;
         }
+        .btn-light {
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -53,12 +56,12 @@
             <div>
                 <button class="btn btn-light" onclick="searchProducts()">Search</button>
                 <button class="btn btn-light">Favorites</button>
-                <button class="btn btn-light">Login</button>
+                <button class="btn btn-light" onclick="window.location.href='/login'">Login</button>
             </div>
         </div>
     </header>
 
-    <div class="container">
+    <div class="container mt-4">
         <h2>Recommended Products</h2>
         <div class="row" id="recommended-products">
             <!-- Recommended products will be injected here -->
@@ -111,7 +114,15 @@
 
         async function searchProducts() {
             const input = document.getElementById('searchInput').value;
+            if (!input) {
+                alert("Please enter a search query.");
+                return;
+            }
             const response = await fetch(`/search?query=${input}`);
+            if (!response.ok) {
+                alert("No products found.");
+                return;
+            }
             const products = await response.json();
             displaySearchResults(products);
         }
