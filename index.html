@@ -3,75 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Price Comparison Site</title>
+    <title>Roblox Assets Marketplace</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
         }
         .header {
-            background-color: #343a40;
+            background-color: #4a90e2;
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
         }
         .logo {
-            font-size: 1.5em;
+            font-size: 2.5em;
             font-weight: bold;
+            margin-bottom: 10px;
         }
         .search-bar {
             width: 50%;
+            margin: 20px auto;
+            transition: transform 0.3s;
+        }
+        .search-bar:focus {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
         .product-card {
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 10px;
             padding: 15px;
-            margin: 10px;
+            margin: 15px;
             background-color: white;
-            transition: box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: slideIn 0.5s ease-in;
         }
         .product-card:hover {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
         .footer {
             background-color: #343a40;
             color: white;
             padding: 20px 0;
             text-align: center;
+            animation: fadeIn 1s ease-in;
         }
-        .error-message {
-            color: red;
-            margin: 20px 0;
-            display: none; /* Hidden by default */
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #4a90e2;
+        }
+        .btn-primary {
+            background-color: #4a90e2;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #357ab8;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
 
     <header class="header">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">PriceCompare</div>
-            <input type="text" class="form-control search-bar" id="searchInput" placeholder="Search for products...">
-            <div>
-                <button class="btn btn-light" onclick="searchProducts()">Search</button>
-                <button class="btn btn-light">Favorites</button>
-                <button class="btn btn-light" onclick="window.location.href='/login'">Login</button>
-            </div>
+        <div class="container">
+            <div class="logo">Roblox Assets Marketplace</div>
+            <input type="text" class="form-control search-bar" id="searchInput" placeholder="Search for assets...">
+            <button class="btn btn-primary" onclick="searchAssets()">Search</button>
         </div>
     </header>
 
     <div class="container mt-4">
-        <h2>Recommended Products</h2>
-        <div class="row" id="recommended-products">
-            <!-- Recommended products will be injected here -->
-        </div>
-
-        <h2>Search Results</h2>
-        <div class="row" id="search-results">
-            <!-- Search results will be injected here -->
-        </div>
-
-        <div class="error-message" id="error-message">
-            <!-- Error messages will be displayed here -->
+        <h2 class="text-center">Featured Assets</h2>
+        <div class="row" id="featured-assets">
+            <div class="col-md-4">
+                <div class="product-card">
+                    <h5>Cool Roblox Hat</h5>
+                    <p>Price: €5.00</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <h5>Epic Sword</h5>
+                    <p>Price: €10.00</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <h5>Roblox Character Skin</h5>
+                    <p>Price: €7.50</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -84,7 +124,7 @@
         <div class="social-icons">
             <a href="#">Facebook</a>
             <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
         </div>
     </footer>
 
@@ -92,76 +132,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        async function fetchRecommendedProducts() {
-            const response = await fetch('/recommended');
-            const products = await response.json();
-            displayRecommendedProducts(products);
-        }
-
-        function displayRecommendedProducts(products) {
-            const container = document.getElementById('recommended-products');
-            container.innerHTML = ''; // Clear previous products
-            products.forEach(product => {
-                const card = document.createElement('div');
-                card.className = 'col-md-4';
-                card.innerHTML = `
-                    <div class="product-card">
-                        <h5>${product.title}</h5>
-                        <p>Price: ${product.price}</p>
-                        <a href="${product.link}" class="btn btn-primary">View Deal</a>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        async function searchProducts() {
+        function searchAssets() {
             const input = document.getElementById('searchInput').value;
-            const errorMessage = document.getElementById('error-message');
-            errorMessage.style.display = 'none'; // Hide error message initially
-
-            if (!input) {
-                alert("Please enter a search query.");
-                return;
-            }
-            const response = await fetch(`/search?query=${input}`);
-            if (!response.ok) {
-                errorMessage.innerText = "No products found.";
-                errorMessage.style.display = 'block'; // Show error message
-                return;
-            }
-            const products = await response.json();
-            displaySearchResults(products);
+            alert(`Searching for: ${input}`);
+            // Implement search functionality here
         }
-
-        function displaySearchResults(products) {
-            const container = document.getElementById('search-results');
-            container.innerHTML = ''; // Clear previous results
-            const errorMessage = document.getElementById('error-message');
-            errorMessage.style.display = 'none'; // Hide error message
-
-            if (products.recommended.length === 0 && products.static.length === 0) {
-                errorMessage.innerText = "No products found.";
-                errorMessage.style.display = 'block'; // Show error message
-                return;
-            }
-
-            products.recommended.forEach(product => {
-                const card = document.createElement('div');
-                card.className = 'col-md-4';
-                card.innerHTML = `
-                    <div class="product-card">
-                        <h5>${product.title}</h5>
-                        <p>Price: ${product.price}</p>
-                        <a href="${product.link}" class="btn btn-primary">Buy Now</a>
-                        <button class="btn btn-secondary btn-sm">Save to Favorites</button>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        window.onload = fetchRecommendedProducts; // Fetch recommended products when the page loads
     </script>
 </body>
 </html>
