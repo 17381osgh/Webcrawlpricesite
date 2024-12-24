@@ -1,164 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roblox Assets Marketplace</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-        }
-        .header {
-            background-color: #4a90e2;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            animation: fadeIn 1s ease-in;
-        }
-        .logo {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .search-bar {
-            width: 80%;
-            margin: 20px auto;
-            transition: transform 0.3s;
-        }
-        .search-bar:focus {
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        .product-card {
-            border: none;
-            border-radius: 15px;
-            padding: 15px;
-            margin: 15px;
-            background-color: white;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: slideIn 0.5s ease-in;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-        .footer {
-            background-color: #343a40;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            animation: fadeIn 1s ease-in;
-        }
-        .social-icons a {
-            color: white;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #4a90e2;
-        }
-        .btn-primary {
-            background-color: #4a90e2;
-            border: none;
-            transition: background-color 0.3s;
-        }
-        .btn-primary:hover {
-            background-color: #357ab8;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    </style>
-</head>
-<body>
-
-    <header class="header">
-        <div class="container">
-            <div class="logo">Roblox Assets Marketplace</div>
-            <input type="text" class="form-control search-bar" id="searchInput" placeholder="Search for assets...">
-            <button class="btn btn-primary" onclick="searchAssets()">Search</button>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="home">
+      <div class="div">
+        <div class="overlap">
+          <div class="side-bar">
+            <div class="overlap-group">
+              <div class="populaire-producten"><div class="text-wrapper">Populaire Producten</div></div>
+              <div class="div-wrapper"><div class="text-wrapper">Thema’s</div></div>
+              <div class="populaire-producten-2"><div class="text-wrapper">Nieuwe Producten</div></div>
+              <div class="populairste"><div class="frame"></div></div>
+              <div class="frame-wrapper"><div class="frame"></div></div>
+            </div>
+            <div class="top-populaire">
+              <div class="overlap-group-2">
+                <div class="frame-2"></div>
+                <div class="frame-3"></div>
+              </div>
+            </div>
+            <div class="tegeltje-dear-santa">
+              <div class="frame-4">
+                <img
+                  class="tegeltje-samen-is"
+                  src="img/tegeltje-samen-is-alles-leuker-iii-20240623-114111-0000-high-1-6.png"
+                />
+                <div class="tegeltje-dear-santa-2">Tegeltje&nbsp;&nbsp;<br />Dear Santa</div>
+                <div class="text-wrapper-2">12,95</div>
+              </div>
+            </div>
+          </div>
+          <div class="tegeltje-samen-is-2">
+            <div class="frame-4">
+              <img class="tegeltje-samen-is" src="img/image.png" />
+              <div class="tegeltje-samen-is-3">Tegeltje&nbsp;&nbsp;<br />Samen is alles leuker</div>
+              <div class="overlap-group-3">
+                <div class="text-wrapper-3">12,95</div>
+                <div class="frame-5"><div class="text-wrapper-4">Bekijk Details</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="tegeltje-huis-met">
+            <div class="frame-4">
+              <img
+                class="tegeltje-samen-is"
+                src="img/tegeltje-samen-is-alles-leuker-iii-20240623-114111-0000-high-1-5.png"
+              />
+              <div class="tegeltje-huisje-met">Tegeltje&nbsp;&nbsp;<br />Huisje met adres</div>
+              <div class="overlap-group-3">
+                <div class="text-wrapper-3">12,95</div>
+                <div class="frame-5"><div class="text-wrapper-4">Bekijk Details</div></div>
+              </div>
+            </div>
+          </div>
         </div>
-    </header>
-
-    <div class="container mt-4">
-        <h2 class="text-center">Featured Assets</h2>
-        <div class="row" id="featured-assets">
-            <div class="col-md-4">
-                <div class="product-card">
-                    <h5><a href="product1.html">Cool Roblox Hat</a></h5>
-                    <p>Price: €5.00</p>
-                    <a href="product1.html" class="btn btn-primary">Buy Now</a>
-                </div>
+        <div class="overlap-2">
+          <div class="side-bar-2">
+            <div class="overlap-3">
+              <div class="default-wrapper">
+                <div class="default"><div class="text-wrapper-5">Meer Ontdekken</div></div>
+              </div>
+              <div class="populaire-producten-3">
+                <div class="meer-ontdekken-wrapper"><div class="text-wrapper-5">Meer Thema’s</div></div>
+              </div>
+              <div class="populaire-producten-4">
+                <div class="default"><div class="text-wrapper-5">Meer Ontdekken</div></div>
+              </div>
+              <div class="frame-wrapper"><div class="frame"></div></div>
+              <div class="populairste"><div class="frame"></div></div>
             </div>
-            <div class="col-md-4">
-                <div class="product-card">
-                    <h5><a href="product2.html">Epic Sword</a></h5>
-                    <p>Price: €10.00</p>
-                    <a href="product2.html" class="btn btn-primary">Buy Now</a>
-                </div>
+            <div class="overlap-group-wrapper">
+              <div class="overlap-group-2">
+                <div class="frame-2"></div>
+                <div class="frame-3"></div>
+              </div>
             </div>
-            <div class="col-md-4">
-                <div class="product-card">
-                    <h5><a href="product3.html">Roblox Character Skin</a></h5>
-                    <p>Price: €7.50</p>
-                    <a href="product3.html" class="btn btn-primary">Buy Now</a>
-                </div>
+          </div>
+          <div class="huisnummerbord">
+            <div class="frame-4">
+              <img
+                class="tegeltje-samen-is"
+                src="img/tegeltje-samen-is-alles-leuker-iii-20240623-114111-0000-high-1-3.png"
+              />
+              <p class="p">Huisnummerbord vierkant <br />Streep met hartje</p>
+              <div class="overlap-group-4">
+                <div class="text-wrapper-3">18,95</div>
+                <div class="frame-5"><div class="text-wrapper-4">Bekijk Details</div></div>
+              </div>
             </div>
-            <div class="col-md-4">
-                <div class="product-card">
-                    <h5><a href="product4.html">Adventurer's Backpack</a></h5>
-                    <p>Price: €8.00</p>
-                    <a href="product4.html" class="btn btn-primary">Buy Now</a>
-                </div>
+          </div>
+          <div class="pyjama-naam-met">
+            <div class="frame-4">
+              <img
+                class="tegeltje-samen-is"
+                src="img/tegeltje-samen-is-alles-leuker-iii-20240623-114111-0000-high-1-4.png"
+              />
+              <div class="pyama-naam-met">Pyama<br />Naam met hartje</div>
+              <div class="overlap-group-4">
+                <div class="text-wrapper-3">18,95</div>
+                <div class="frame-5"><div class="text-wrapper-4">Bekijk Details</div></div>
+              </div>
             </div>
-            <div class="col-md-4">
-                <div class="product-card">
-                    <h5><a href="product5.html">Magic Wand</a></h5>
-                    <p>Price: €12.00</p>
-                    <a href="product5.html" class="btn btn-primary">Buy Now</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-card">
-                    <h5><a href="product6.html">Superhero Cape</a></h5>
-                    <p>Price: €9.00</p>
-                    <a href="product6.html" class="btn btn-primary">Buy Now</a>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="overlap-4">
+          <div class="tegeltje-kerstboom">
+            <div class="frame-4">
+              <img
+                class="tegeltje-samen-is"
+                src="img/tegeltje-samen-is-alles-leuker-iii-20240623-114111-0000-high-1.png"
+              />
+              <div class="tegeltje-kerstboom-2">Tegeltje&nbsp;&nbsp;<br />Kerstboom</div>
+              <div class="overlap-group-3">
+                <div class="text-wrapper-3">12,95</div>
+                <div class="frame-5"><div class="text-wrapper-4">Bekijk Details</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="tegeltje-eigen-tekst">
+            <div class="frame-4">
+              <img
+                class="tegeltje-samen-is"
+                src="img/tegeltje-samen-is-alles-leuker-iii-20240623-114111-0000-high-1-2.png"
+              />
+              <div class="tegeltje-eigen-tekst-2">Tegeltje&nbsp;&nbsp;<br />Eigen Tekst</div>
+              <div class="overlap-group-3">
+                <div class="text-wrapper-3">16,95</div>
+                <div class="frame-5"><div class="text-wrapper-4">Bekijk Details</div></div>
+              </div>
+            </div>
+          </div>
+          <img class="logo" src="img/logo.png" />
+        </div>
+        <div class="top-frame">
+          <div class="top-bar">
+            <div class="texts">
+              <p class="text-wrapper-6">Alle Tegeltjes 2 + 1 gratis!</p>
+              <div class="text-wrapper-7">Gratis inpakservice</div>
+              <img class="img" src="img/logo-2.png" />
+            </div>
+          </div>
+          <div class="navbar">
+            <div class="text-wrapper-8">Home</div>
+            <div class="wonen-accessoires">Wonen &amp; Accessoires</div>
+            <div class="baby-kids">Baby &amp; Kids</div>
+            <div class="text-wrapper-9">Stickers</div>
+            <div class="text-wrapper-10">Momenten</div>
+            <div class="text-wrapper-11">Kaarten</div>
+            <div class="text-wrapper-12">Contact</div>
+            <div class="text-wrapper-13">Over Lieve Kadootjes</div>
+          </div>
+          <div class="overlap-5">
+            <img class="cart" src="img/cart.svg" />
+            <div class="search-frame">
+              <div class="frame-6">
+                <img class="ic-baseline-search" src="img/ic-baseline-search.svg" />
+                <div class="text-wrapper-14">Search</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <footer class="footer">
-        <div>
-            <a href="#">Terms of Service</a> | 
-            <a href="#">Privacy Policy</a> | 
-            <a href="#">Contact Us</a>
-        </div>
-        <div class="social-icons">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        function searchAssets() {
-            const input = document.getElementById('searchInput').value;
-            alert(`Searching for: ${input}`);
-            // Implement search functionality here
-        }
-    </script>
-</body>
+  </body>
 </html>
