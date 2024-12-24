@@ -1,0 +1,651 @@
+.home,
+.home * {
+  box-sizing: border-box;
+}
+.home {
+  background: #ffffff;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+.side-bar {
+  width: 500px;
+  height: 2556px;
+  position: absolute;
+  left: -1px;
+  top: 100px;
+}
+.populaire-producten {
+  background: var(--lieve-kadootjes-base, #8ead9d);
+  border-radius: 0px 50px 50px 0px;
+  width: 410px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  overflow: hidden;
+}
+.populaire-producten2 {
+  color: #eeeeee;
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  translate: 0 -50%;
+  -webkit-text-stroke: 2px var(--lieve-kadootjes-hartje, #f2777d);
+}
+.populaire-producten3 {
+  background: var(--lieve-kadootjes-base, #8ead9d);
+  border-radius: 0px 50px 50px 0px;
+  width: 187px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 600px;
+  overflow: hidden;
+}
+.thema-s {
+  color: #eeeeee;
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  translate: 0 -50%;
+  -webkit-text-stroke: 2px var(--lieve-kadootjes-hartje, #f2777d);
+}
+.populaire-producten4 {
+  background: var(--lieve-kadootjes-base, #8ead9d);
+  border-radius: 0px 50px 50px 0px;
+  width: 348px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 1100px;
+  overflow: hidden;
+}
+.nieuwe-producten {
+  color: #eeeeee;
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  translate: 0 -50%;
+  -webkit-text-stroke: 2px var(--lieve-kadootjes-hartje, #f2777d);
+}
+.top-populaire-producten {
+  width: 190px;
+  height: 180px;
+  position: absolute;
+  left: 0px;
+  top: -90px;
+}
+.frame-4 {
+  background: var(--lieve-kadootjes-base, #8ead9d);
+  width: 100px;
+  height: 269px;
+  position: absolute;
+  left: 0px;
+  top: -78px;
+  overflow: hidden;
+}
+.frame-5 {
+  background: #ffffff;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50px;
+  top: 90px;
+  overflow: hidden;
+}
+.populairste-producten {
+  background: var(--lieve-kadootjes-base, #8ead9d);
+  width: 101px;
+  height: 402px;
+  position: absolute;
+  left: 0px;
+  top: 199px;
+  overflow: hidden;
+}
+.frame-7 {
+  background: #ffffff;
+  border-radius: 50px;
+  width: 100px;
+  height: 400px;
+  position: absolute;
+  left: 50px;
+  top: 1px;
+  overflow: hidden;
+}
+.populairste-producten2 {
+  background: var(--lieve-kadootjes-base, #8ead9d);
+  width: 101px;
+  height: 402px;
+  position: absolute;
+  left: 0px;
+  top: 699px;
+  overflow: hidden;
+}
+.tegeltje-dear-santa {
+  width: 275px;
+  height: 400px;
+  position: absolute;
+  left: 50px;
+  top: 1200px;
+  overflow: hidden;
+}
+.frame-9 {
+  background: var(--techatoi-secties-kaarten, #ededed);
+  border-radius: 50px;
+  width: 225px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+  overflow: hidden;
+}
+.tegeltje-samen-is-alles-leuker-iii-20240623-114111-0000-high-1 {
+  border-radius: 50px 50px 25px 25px;
+  width: 205px;
+  height: 205px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  object-fit: cover;
+}
+.tegeltje-dear-santa2 {
+  color: var(--lieve-kadootjes-base, #8ead9d);
+  text-align: center;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 225px;
+}
+._12-95 {
+  color: var(--lieve-kadootjes-hartje, #f2777d);
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 272px;
+}
+.side-bar2 {
+  width: 500px;
+  height: 2556px;
+  position: absolute;
+  left: 1921px;
+  top: 100px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+.populaire-producten5 {
+  background: var(--lieve-kadootjes-base, #8ead9d);
+  border-radius: 0px 50px 50px 0px;
+  width: 322px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  overflow: hidden;
+}
+.default {
+  width: 292px;
+  height: 70px;
+  position: absolute;
+  left: 307px;
+  top: 15px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+  overflow: hidden;
+}
+.meer-ontdekken {
+  color: #eeeeee;
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  translate: 0 -50%;
+  -webkit-text-stroke: 2px var(--lieve-kadootjes-hartje, #f2777d);
+}
+.populaire-producten6 {
+  background: var(--lieve-kadootjes-base, #8ead9d);
+  border-radius: 0px 50px 50px 0px;
+  width: 320px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 600px;
+  overflow: hidden;
+}
+.default2 {
+  width: 270px;
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+  overflow: hidden;
+}
+.populaire-producten7 {
+  background: var(--lieve-kadootjes-base, #8ead9d);
+  border-radius: 0px 50px 50px 0px;
+  width: 322px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 1100px;
+  overflow: hidden;
+}
+.default3 {
+  width: 292px;
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+  overflow: hidden;
+}
+.tegeltje-samen-is-alles-leuker {
+  background: rgba(0, 0, 0, 0);
+  width: 275px;
+  height: 400px;
+  position: absolute;
+  left: 49px;
+  top: 300px;
+  overflow: hidden;
+}
+.tegeltje-samen-is-alles-leuker2 {
+  color: var(--lieve-kadootjes-base, #8ead9d);
+  text-align: center;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 225px;
+}
+.frame-11 {
+  background: var(--lieve-kadootjes-base, #8ead9d);
+  border-radius: 10px;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 290px;
+  overflow: hidden;
+}
+.bekijk-details {
+  color: var(--lieve-kadootjes-background, #f1f1f1);
+  text-align: center;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+}
+.tegeltje-huis-met-adres {
+  background: rgba(0, 0, 0, 0);
+  width: 275px;
+  height: 400px;
+  position: absolute;
+  left: 358px;
+  top: 300px;
+  overflow: hidden;
+}
+.tegeltje-huisje-met-adres {
+  color: var(--lieve-kadootjes-base, #8ead9d);
+  text-align: center;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 225px;
+}
+.tegeltje-kerstboom {
+  background: rgba(0, 0, 0, 0);
+  width: 275px;
+  height: 400px;
+  position: absolute;
+  left: 667px;
+  top: 300px;
+  overflow: hidden;
+}
+.tegeltje-kerstboom2 {
+  color: var(--lieve-kadootjes-base, #8ead9d);
+  text-align: center;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 225px;
+}
+.tegeltje-eigen-tekst {
+  background: rgba(0, 0, 0, 0);
+  width: 275px;
+  height: 400px;
+  position: absolute;
+  left: 976px;
+  top: 300px;
+  overflow: hidden;
+}
+.tegeltje-eigen-tekst2 {
+  color: var(--lieve-kadootjes-base, #8ead9d);
+  text-align: center;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 225px;
+}
+._16-95 {
+  color: var(--lieve-kadootjes-hartje, #f2777d);
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 272px;
+}
+.huisnummerbord-vierkant-streep-met-hartje {
+  background: rgba(0, 0, 0, 0);
+  width: 275px;
+  height: 400px;
+  position: absolute;
+  left: 1286px;
+  top: 300px;
+  overflow: hidden;
+}
+.huisnummerbord-vierkant-streep-met-hartje2 {
+  color: var(--lieve-kadootjes-base, #8ead9d);
+  text-align: center;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 225px;
+}
+._18-95 {
+  color: var(--lieve-kadootjes-hartje, #f2777d);
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 272px;
+}
+.pyjama-naam-met-hartje {
+  background: rgba(0, 0, 0, 0);
+  width: 275px;
+  height: 400px;
+  position: absolute;
+  left: 1596px;
+  top: 300px;
+  overflow: hidden;
+}
+.pyama-naam-met-hartje {
+  color: var(--lieve-kadootjes-base, #8ead9d);
+  text-align: center;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 225px;
+}
+.logo {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: calc(50% - 775px);
+  object-fit: cover;
+}
+.top-frame {
+  background: var(--lieve-kadootjes-base, #8ead9d);
+  width: 1922px;
+  height: 101px;
+  position: sticky;
+  left: 50%;
+  translate: -50%;
+  top: -1px;
+  overflow: hidden;
+}
+.top-bar {
+  background: var(--lieve-kadootjes-text, #fafafa);
+  border-radius: 0px 0px 25px 25px;
+  width: 700px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 0px;
+  box-shadow: var(--schaduw-box-shadow, 0px 5px 10px 0px rgba(0, 0, 0, 0.25));
+  overflow: hidden;
+}
+.texts {
+  width: 576px;
+  height: 31px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 10px;
+}
+.alle-tegeltjes-2-1-gratis {
+  color: var(--lieve-kadootjes-hartje, #f2777d);
+  text-align: left;
+  font-family: "IbmPlexSans-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  left: -11px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.gratis-inpakservice {
+  color: var(--lieve-kadootjes-hartje, #f2777d);
+  text-align: left;
+  font-family: "IbmPlexSans-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  left: 369px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.logo2 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+  object-fit: cover;
+}
+.buttons {
+  width: 1362px;
+  height: 35px;
+  position: absolute;
+  left: 50px;
+  top: 55px;
+}
+.home2 {
+  color: #eeeeee;
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.wonen-accessoires {
+  color: var(--lieve-kadootjes-textd, #737373);
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 125px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.baby-kids {
+  color: var(--lieve-kadootjes-textd, #737373);
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 386px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.stickers {
+  color: var(--lieve-kadootjes-textd, #737373);
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 580px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.momenten {
+  color: var(--lieve-kadootjes-textd, #737373);
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 727px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.kaarten {
+  color: var(--lieve-kadootjes-textd, #737373);
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 894px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.contact {
+  color: var(--lieve-kadootjes-textd, #737373);
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 1041px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.over-lieve-kadootjes {
+  color: var(--lieve-kadootjes-textd, #737373);
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 1183px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.cart {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: calc(50% - -881px);
+  top: 50%;
+  translate: 0 -50%;
+  overflow: visible;
+}
+.search-frame {
+  width: 363px;
+  height: 78px;
+  position: absolute;
+  left: 1499px;
+  top: 11px;
+  overflow: hidden;
+}
+.frame-1 {
+  background: rgba(250, 250, 250, 0.75);
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: calc(50% - -62.5px);
+  top: 50%;
+  translate: 0 -50%;
+  overflow: hidden;
+}
+.ic-baseline-search {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+  transform: translate(0px, 0px);
+  overflow: visible;
+}
+.search {
+  color: var(--lieve-kadootjes-textd, #737373);
+  text-align: left;
+  font-family: "HelloAlmeida-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  right: 249.44%;
+  left: -266.11%;
+  width: 116.67%;
+  bottom: 23.33%;
+  top: 23.33%;
+  height: 53.33%;
+}
